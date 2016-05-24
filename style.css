@@ -1,0 +1,257 @@
+/* STYLESHEET FOR ACM ICPC ASIA-MANILA REGIONALS WEBSITE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  background-color: #A6B9C0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #066C91;
+  transition: all 200ms;
+}
+  
+  a:hover {
+    color: #00AABC;
+  }
+
+/* HEADER STYLES */
+header {
+  width: 100%;
+  height: 4em;
+  padding: 0 2em;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  header .logo {
+    display: block;
+    height: 80%;
+  }
+
+  nav {
+    display: block;
+  }
+
+    nav .nav-item {
+      margin: 0 0.5em;
+      color: #066C91;
+      padding: 0.5em 0.75em;
+      border: 5px solid transparent;
+      /*transition: all ease-in-out 100ms;*/
+    }
+
+      nav .nav-item:hover {
+        border-color: #066C91;
+        color: #066C91;
+      }
+
+      /* special button */
+      #register {
+        background-color: #066C91;
+        color: #fff;
+      }
+
+        #register:hover {
+          border-color: #00AABC;
+          background-color: #00AABC;
+        }
+
+/* FOOTER STYLES */
+footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+  .sitemap {
+    width: 20%;
+    height: 8em;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .copyright {
+    align-self: flex-end;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .logos {
+    display: block;
+    width: 20%;
+  }
+
+    .logos img {
+      width: 75%;
+    }
+
+/* MAIN STYLES */
+/* ABOVE THE FOLD */
+#above-fold {
+  height: calc(100vh - 4em);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(0,0,0,0.15), rgba(0,0,0,0.5), rgba(0,0,0,1)), url('img/above-fold-01.jpg') no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+  #main-info {
+    display: block;
+    text-align: center;
+  }
+
+    #main-info h1 {
+      font-size: 3em;
+      color: #fff;
+    }
+
+    #details {
+      margin: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+      #date-box, #location-box {
+        color: #fff;
+        border: 5px solid;
+        border-radius: 10px;
+      }
+
+        #date-box {width: 39%;}
+
+        #location-box {width: 43%;}
+
+        #date-box i,
+        #location-box i {
+          padding: 0.75em;
+          border-right: 5px solid;
+        }
+
+        #date, #location {
+          padding: 0 0.75em;
+        }
+
+  #buttons {
+    margin-top: 4em;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+    #buttons a {
+      text-align: center;
+      padding: 0.75em 2em;
+      background-color: #066C91;
+      color: #fff;
+    }
+
+      #buttons a:hover {
+        background-color: #00AABC;
+      }
+
+/* BELOW FOLD */
+#news {
+  padding: 2.5em 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+  #posts {
+    width: 60%;
+    display: block;
+  }
+
+    #posts .post {
+      margin-bottom: 2.5em;
+      display: block;
+      padding: 2em 4em;
+      background-color: #E9E9ED;
+    }
+
+      .post .post-header {
+        margin-bottom: 1.5em;
+      }
+
+        .post .post-header .post-title {
+          margin-bottom: 0.25em;
+        }
+
+        .post .post-header .post-details {
+          font-size: 12px;
+        }
+
+      .post .post-body {
+        line-height: 150%;
+      }
+
+        .post .post-preview p {
+          margin-bottom: 0.75em;
+        }
+
+        .post .post-preview img {
+          max-width: 100%;
+          margin: 0 auto;
+        }
+
+
+      .post hr {
+        margin: 1.5em 0 0.75em;
+      }
+
+      .post .post-tags {
+        text-align: center;
+      }
+
+        .post .post-tags .post-tag {
+          display: inline-block;
+          margin: 0 0.5em;
+        }
+
+    #navigation {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+      #navigation a {
+        color: #1a1a1a;
+      }
+
+        #navigation a:hover {
+          color: #5a5a5a;
+        }
+
+  #social-media {
+    width: 30%;
+    background-color: #E9E9ED;
+    padding: 2em;
+    display: block;
+  }
+
+    #social-media h3 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
