@@ -47,13 +47,10 @@ header {
       margin: 0 0.5em;
       color: #066C91;
       padding: 0.5em 0.75em;
-      border: 5px solid transparent;
-      /*transition: all ease-in-out 100ms;*/
     }
 
       nav .nav-item:hover {
-        border-color: #066C91;
-        color: #066C91;
+        color: #00AABC;
       }
 
       /* special button */
@@ -63,7 +60,6 @@ header {
       }
 
         #register:hover {
-          border-color: #00AABC;
           background-color: #00AABC;
         }
 
