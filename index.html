@@ -101,7 +101,8 @@
 
     <div id="social-media">
       <h3>Get Live Updates</h3>
-      <p>Twitter embed code here?</p>
+      <a class="twitter-timeline" href="https://twitter.com/ICPCNews" data-widget-id="736185526772858882">Tweets by @ICPCNews</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
   </main>
 
@@ -117,7 +118,7 @@
 
     <div class="copyright">
       Copyright &copy; 2016<br>
-      <span style="font-size: 10px;">Website by <a href="http://chiawase.github.io">Chi Se&ntilde;ires</a> and <a href="http://github.com/RIanDeLaCruz">Ian De La Cruz</a></span>
+      <span style="font-size: 10px;">Website by <a href="http://chiawase.github.io">Chi Se&ntilde;ires</a> and <a href="http://iandelacruz.me">Ian De La Cruz</a></span>
     </div>
 
     <div class="logos">
@@ -125,5 +126,23 @@
       <a href="http://www.ibm.com/"><img src="img/ibm-logo.jpg"></a>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  var navHeight = document.getElementsByTagName('nav')[0].clientHeight;
+  $('a[href*="#"]:not([href="#"])').click(function (e) {
+    e.preventDefault();
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - (navHeight*2)
+        }, 800);
+        location.hash = this.hash;
+        return false;
+      }
+    }
+  });
+  </script>
 </body>
 </html>

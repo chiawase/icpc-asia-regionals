@@ -32,6 +32,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
 }
 
   header .logo {
@@ -102,6 +103,7 @@ footer {
 /* MAIN STYLES */
 /* ABOVE THE FOLD */
 #above-fold {
+  margin-top: 4em;
   height: calc(100vh - 4em);
   display: flex;
   flex-direction: column;
@@ -110,6 +112,7 @@ footer {
   background: linear-gradient(rgba(255,255,255,0.5), rgba(0,0,0,0.15), rgba(0,0,0,0.5), rgba(0,0,0,1)), url('img/above-fold-01.jpg') no-repeat;
   background-size: cover;
   background-position: bottom;
+  background-attachment: fixed;
 }
 
   #main-info {
