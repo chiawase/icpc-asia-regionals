@@ -48,9 +48,35 @@ header {
     height: 80%;
   }
 
+    header .logo img {
+      display: block;
+      height: 80%;
+    }
+
   nav {
     display: block;
   }
+
+    .show-menu {
+      padding: 0.5em;
+      font-size: 1.85em;
+      text-decoration: none;
+      color: #066C91;
+      position: absolute;
+      cursor: pointer;
+      right: 0;
+      top: 0;
+      display: none;
+    }
+
+    header input[type="checkbox"] {
+      display: none;
+    }
+
+    header input[type="checkbox"]:checked ~ nav {
+      display: block;
+      transition: 200ms;
+    }
 
     nav .nav-item {
       margin: 0 0.5em;
@@ -321,4 +347,89 @@ header ~ div {
   position: absolute;
   top: 100vh;
   right: 5em;
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 760px) {
+  /* HEADER STYLES */
+  header {
+    padding: 0 1em;
+    display: table;
+  }
+
+    header .logo {
+      height: 50%;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+      header .logo img {
+        height: auto;
+        width: 80%;
+      }
+
+    nav {
+      width: 100%;
+      position: absolute;
+      background: #fff;
+      top: 4em;
+      left: 0;
+      display: none;
+    }
+
+      nav .nav-item {
+        width: 100%;
+        margin: 0;
+        display: block;
+        text-align: center;
+      }
+
+    .show-menu {
+      display: block;
+    }
+
+  #above-fold {
+    display: block;
+    padding: 2em 0;
+  }
+
+    #above-fold > div {
+      width: 100%;
+    }
+
+    #main-info {
+      padding: 1.5em 1em 0;
+    }
+
+      #main-info h1 {
+        font-size: 1.9em;
+      }
+
+    #details {
+      display: block;
+    }
+
+      #date-box, #location-box {
+        margin: 1em auto;
+      }
+
+      #date-box {width: 90%;}
+      #location-box {width: 100%;}
+
+        #date, #location {
+          font-size: 0.8em;
+          line-height: 100%;
+        }
+
+    #buttons {
+      display: block;
+      padding: 0 1em;
+    }
+
+      #buttons a {
+        display: block;
+        margin: 1em auto;
+      }
+
+  /* FOOTER STYLES */
 }

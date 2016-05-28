@@ -16,8 +16,12 @@
   <![endif]-->
 
   <header>
-    <img src="img/icpc-logo.png" class="logo">
+    <a href="index.html" class="logo">
+      <img src="img/icpc-logo.png">
+    </a>
 
+    <label for="show-menu" class="show-menu"><i class="fa fa-bars"></i></label>
+    <input type="checkbox" id="show-menu" role="button">
     <nav>
       <a class="nav-item" href="post.html">Home</a>
       <a class="nav-item" href="post.html">About</a>
@@ -129,6 +133,7 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script type="text/javascript">
   var navHeight = document.getElementsByTagName('nav')[0].clientHeight;
+
   $('a[href*="#"]:not([href="#"])').click(function (e) {
     e.preventDefault();
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
