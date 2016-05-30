@@ -68,7 +68,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="schedule.html">Schedule</a></li>
         <li><a href="instructions.html">Instructions</a></li>
-        <li><a href="news.html">News &amp; Announcents</a></li>
+        <li><a href="news.html">News &amp; Announcements</a></li>
         <li><a href="register.html">How to Register</a></li>
       </ul>
 
@@ -84,21 +84,30 @@
     </footer>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script type="text/javascript">
+    var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
     var navHeight = document.getElementsByTagName('nav')[0].clientHeight;
 
-    $('a[href*="#"]:not([href="#"])').click(function (e) {
-      e.preventDefault();
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top - (navHeight*2)
-          }, 800);
-          location.hash = this.hash;
-          return false;
-        }
+    $(document).ready(function (e) {
+      if (viewportWidth <= 760) {
+        
       }
+
+      $('a[href*="#"]:not([href="#"])').click(function (e) {
+        e.preventDefault();
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top - (navHeight*2)
+            }, 800);
+            location.hash = this.hash;
+            return false;
+          }
+        }
+      });
     });
     </script>
 </body>
