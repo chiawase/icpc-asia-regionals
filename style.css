@@ -15,7 +15,6 @@ body {
   background-color: #A6B9C0;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
-  line-height: 150%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,10 +29,6 @@ a {
   a:hover {
     color: #00AABC;
   }
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: initial;
-}
 
 /* HEADER STYLES */
 header {
@@ -118,7 +113,7 @@ footer {
 
   .sitemap {
     width: 20%;
-    height: 9em;
+    height: 8em;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -129,7 +124,6 @@ footer {
   .copyright {
     align-self: flex-end;
     text-align: center;
-    line-height: initial;
     font-size: 12px;
   }
 
@@ -251,7 +245,9 @@ header ~ div {
           font-size: 12px;
         }
 
-      .post .post-body {}
+      .post .post-body {
+        line-height: 150%;
+      }
 
         .post .post-preview p {
           margin-bottom: 0.75em;
@@ -273,9 +269,7 @@ header ~ div {
 
         .post .post-tags .post-tag {
           display: inline-block;
-          background-color: #fff;
           margin: 0 0.5em;
-          padding: 0.5em;
         }
 
     #navigation {
@@ -336,13 +330,18 @@ header ~ div {
     }
 
     #single .post p {
-      
+      line-height: 175%;
       margin: 1em 0;
     }
 
   #single .post .post-footer {
     width: 60%;
   }
+
+    #single .post .post-tags .post-tag {
+      background: #fff;
+      padding: 0.5em;
+    }
 
 #single #social-media {
   position: absolute;
@@ -351,112 +350,11 @@ header ~ div {
 }
 
 /* RESPONSIVE STYLES */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  header {
-    padding: 0 1em;
-    display: table;
-    top: 0;
-  }
-
-    header .logo {
-      height: 60%;
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-      header .logo img {
-        height: 30%;
-      }
-
-  nav {
-    width: 35%;
-    position: absolute;
-    background: #fff;
-    top: 4em;
-    right: 1em;
-    display: none;
-  }
-
-    nav .nav-item {
-      width: 100%;
-      margin: 0;
-      display: block;
-      text-align: center;
-    }
-
-  .show-menu {
-    display: block;
-    font-size: 2em;
-    margin-right: 0.5em;
-  }
-
-  #main-info h1 {
-    font-size: 2.75em;
-  }
-
-  #date-box, #location-box {
-    margin: 1em auto;
-  }
-
-    #date-box {width: 42%;}
-    #location-box {width: 48%;}
-
-  #buttons {
-    width: 50%;
-  }
-
-  /* FOOTER STYLES */
-  footer {
-    padding: 1.5em;
-  }
-
-    .sitemap {
-      width: 25%;
-    }
-
-    .logos {
-      width: 25%;
-    }
-
-      .logos img {
-        width: 100%;
-      }
-
-  /* MAIN STYLES */
-  #news {
-    padding: 2.5em;
-    justify-content: space-between;
-  }
-
-    #posts {
-      width: 63%;
-    }
-
-      #posts .post {
-        padding: 2em;
-      }
-
-    #social-media {
-      width: 35%;
-    }
-
-  /* SINGLE POST STYLES */
-  #single #social-media {
-    right: 3em;
-  }
-}
-
 @media screen and (max-width: 760px) {
-  body {
-    position: relative;
-    display: block;
-  }
-
   /* HEADER STYLES */
   header {
     padding: 0 1em;
     display: table;
-    top: 0;
   }
 
     header .logo {
@@ -488,11 +386,11 @@ header ~ div {
 
     .show-menu {
       display: block;
-      font-size: 2em;
     }
 
-  #above-fold, #single {
+  #above-fold {
     display: block;
+    padding: 2em 0;
   }
 
     #above-fold > div {
@@ -526,7 +424,6 @@ header ~ div {
     #buttons {
       display: block;
       padding: 0 1em;
-      margin-top: 3em;
     }
 
       #buttons a {
@@ -535,148 +432,4 @@ header ~ div {
       }
 
   /* FOOTER STYLES */
-  footer {
-    display: table-cell;
-    height: auto;
-    vertical-align: bottom;
-    padding-bottom: 0.5em;
-  }
-
-    .sitemap {
-      display: none;
-    }
-
-    .logos {
-      width: 100%;
-      margin: 1em auto;
-    }
-
-      .logos img {
-        margin: 0 auto;
-        width: 49%;
-        display: inline-block;
-      }
-
-  /* MAIN STYLES */
-  header ~ div {
-    display: block;
-    width: 100vw;
-  }
-
-  #news {
-    display: block;
-    width: 100vw;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-  }
-
-    #posts, #social-media {
-      display: block;
-      width: 100%;
-    }
-
-      #posts .post, #social-media {
-        padding: 2em 1.5em;
-        margin-bottom: 1.5em;
-      }
-
-        .post .post-header {
-          margin-bottom: 1em;
-        }
-
-          .post .post-header h1 {
-            font-size: 1.75em;
-          }
-
-          .post .post-header .post-details {
-            font-size: 10px;
-          }
-
-        .post .post-body {}
-
-          .post .post-tags {
-            font-size: 12px;
-          }
-
-            .post .post-tags .post-tag {
-              margin: 0;
-            }
-
-    #navigation {
-      display: block;
-      margin-bottom: 1.5em;
-    }
-
-      #navigation a {
-        margin-bottom: 1em;
-      }
-
-      #navigation .older-posts {
-        float: left;
-      }
-
-      #navigation .newer-posts {
-        float: right;
-      }
-
-    #social-media {
-      clear: both;
-    }
-
-  /* SINGLE POST STYLES */
-  #single {
-    padding: 1em 1.5em;
-  }
-
-    #single .post {
-      display: block;
-      margin: 0;
-      margin-top: 1em;
-    }
-
-    #single .post .post-header {
-      margin-bottom: 1em;
-    }
-
-      #single .post .post-header h1 {
-        font-size: 1.9em;
-      }
-
-      #single .post .post-info {
-        font-size: 0.8em;
-      }
-
-    #single .post .post-body, #single .post .post-footer {
-      width: 100%;
-      padding: 0;
-    }
-
-    #single #social-media {
-      display: none;
-    }
-}
-
-@media screen and (max-width: 425px) {
-  header .logo img {width: 65%;}
-  #buttons {padding: 0 4em;}
-  #date-box {width: 60%;}
-  #location-box {width: 65%;}
-
-  
-}
-
-@media screen and (max-width: 370px) {
-  #buttons {padding: 0 3em;}
-  #date-box {width: 70%;}
-  #location-box {width: 80%;}
-}
-
-@media screen and (max-width: 320px) {
-  #date-box {width: 90%;}
-  #location-box {width: 100%;}
-
-  .logos img {
-    width: 70%;
-    display: block;
-  }
 }
