@@ -16,14 +16,18 @@
   <![endif]-->
 
   <header>
-    <img src="img/icpc-logo.png" class="logo">
+    <a href="index.html" class="logo">
+      <img src="img/icpc-logo.png">
+    </a>
 
+    <label for="show-menu" class="show-menu"><i class="fa fa-bars"></i></label>
+    <input type="checkbox" id="show-menu" role="button">
     <nav>
-      <a class="nav-item" href="index.html">Home</a>
-      <a class="nav-item" href="about.html">About</a>
-      <a class="nav-item" href="schedule.html">Schedule</a>
-      <a class="nav-item" href="instructions.html">Instructions</a>
-      <a class="nav-item" href="news.html">News &amp; Announcements</a>
+      <a class="nav-item" href="post.html">Home</a>
+      <a class="nav-item" href="post.html">About</a>
+      <a class="nav-item" href="post.html">Schedule</a>
+      <a class="nav-item" href="post.html">Instructions</a>
+      <a class="nav-item" href="post.html">News &amp; Announcements</a>
       <a id="register" class="nav-item" href="register.html">How to Register</a>
     </nav>
   </header>
@@ -59,24 +63,43 @@
   </div>
 
   <footer>
-    <ul class="sitemap">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="schedule.html">Schedule</a></li>
-      <li><a href="instructions.html">Instructions</a></li>
-      <li><a href="news.html">News &amp; Announcents</a></li>
-      <li><a href="register.html">How to Register</a></li>
-    </ul>
+      <ul class="sitemap">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="instructions.html">Instructions</a></li>
+        <li><a href="news.html">News &amp; Announcents</a></li>
+        <li><a href="register.html">How to Register</a></li>
+      </ul>
 
-    <div class="copyright">
-      Copyright &copy; 2016<br>
-      <span style="font-size: 10px;">Website by <a href="http://chiawase.github.io">Chi Se&ntilde;ires</a> and <a href="http://iandelacruz.me">Ian De La Cruz</a></span>
-    </div>
+      <div class="copyright">
+        Copyright &copy; 2016<br>
+        <span style="font-size: 10px;">Website by <a href="http://chisenires.me">Chi Se&ntilde;ires</a> and <a href="http://iandelacruz.me">Ian De La Cruz</a></span>
+      </div>
 
-    <div class="logos">
-      <a href="http://ls.ateneo.edu"><img src="img/ateneo-logo.jpg"></a>
-      <a href="http://www.ibm.com/"><img src="img/ibm-logo.jpg"></a>
-    </div>
-  </footer>
+      <div class="logos">
+        <a href="http://ls.ateneo.edu"><img src="img/ateneo-logo.jpg"></a>
+        <a href="http://www.ibm.com/"><img src="img/ibm-logo.jpg"></a>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    var navHeight = document.getElementsByTagName('nav')[0].clientHeight;
+
+    $('a[href*="#"]:not([href="#"])').click(function (e) {
+      e.preventDefault();
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top - (navHeight*2)
+          }, 800);
+          location.hash = this.hash;
+          return false;
+        }
+      }
+    });
+    </script>
 </body>
 </html>
