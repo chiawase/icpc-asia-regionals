@@ -1,0 +1,699 @@
+/*
+Theme Name: ICPC Regionals Layout
+Author: Chi Señires
+Author URI: http://chisenires.me
+Description: Layout for ACM ICPC Asia-Manila Regionals.
+Version: 1.0
+Tags: icpc, acm, ateneo, asia, manila, regionals
+*/
+
+/* STYLESHEET FOR ACM ICPC ASIA-MANILA REGIONALS WEBSITE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+  background-color: #A6B9C0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  line-height: 150%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #066C91;
+  transition: all 200ms;
+}
+  
+  a:hover {
+    color: #00AABC;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: initial;
+}
+
+/* HEADER STYLES */
+header {
+  width: 100%;
+  height: 4em;
+  padding: 0 2em;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 6;
+}
+
+  header .logo {
+    display: block;
+    height: 80%;
+  }
+
+    header .logo img {
+      display: block;
+      height: 80%;
+    }
+
+  nav {
+    display: block;
+  }
+
+    .show-menu {
+      padding: 0.5em;
+      font-size: 1.85em;
+      text-decoration: none;
+      color: #066C91;
+      position: absolute;
+      cursor: pointer;
+      right: 0;
+      top: 0;
+      display: none;
+    }
+
+    header input[type="checkbox"] {
+      display: none;
+    }
+
+    header input[type="checkbox"]:checked ~ nav {
+      display: block;
+      transition: 200ms;
+    }
+
+    nav .nav-item {
+      margin: 0 0.5em;
+      color: #066C91;
+      padding: 0.5em 0.75em;
+    }
+
+      nav .nav-item:hover {
+        color: #00AABC;
+      }
+
+      /* special button */
+      #register {
+        background-color: #066C91;
+        color: #fff;
+      }
+
+        #register:hover {
+          background-color: #00AABC;
+        }
+
+/* FOOTER STYLES */
+footer {
+  align-self: bottom;
+  width: 100%;
+  max-height: 12em;
+  background-color: #fff;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+  .sitemap {
+    width: 20%;
+    height: 9em;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .copyright {
+    align-self: flex-end;
+    text-align: center;
+    line-height: initial;
+    font-size: 12px;
+  }
+
+  .logos {
+    display: block;
+    width: 20%;
+  }
+
+    .logos img {
+      width: 75%;
+    }
+
+/* MAIN STYLES */
+header ~ div {
+  flex: 1;
+}
+
+#above-fold, #single {
+  margin-top: 4em;
+  display: flex;
+}
+
+/* ABOVE THE FOLD */
+#above-fold {
+  height: calc(100vh - 4em);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  /*background: linear-gradient(rgba(255,255,255,0.5), rgba(0,0,0,0.15), rgba(0,0,0,0.5), rgba(0,0,0,1)), url('<?php get_template_directory_uri();/img/above-fold-01.jpg') no-repeat;*/
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+  #main-info {
+    display: block;
+    text-align: center;
+  }
+
+    #main-info h1 {
+      font-size: 3em;
+      color: #fff;
+    }
+
+    #details {
+      margin: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+      #date-box, #location-box {
+        color: #fff;
+        border: 5px solid;
+        border-radius: 10px;
+      }
+
+        #date-box {width: 39%;}
+
+        #location-box {width: 43%;}
+
+        #date-box i,
+        #location-box i {
+          padding: 0.75em;
+          border-right: 5px solid;
+        }
+
+        #date, #location {
+          padding: 0 0.75em;
+        }
+
+  #buttons {
+    margin-top: 4em;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+    #buttons a {
+      text-align: center;
+      padding: 0.75em 2em;
+      background-color: #066C91;
+      color: #fff;
+    }
+
+      #buttons a:hover {
+        background-color: #00AABC;
+      }
+
+/* BELOW FOLD */
+#news {
+  padding: 2.5em 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+  #posts {
+    width: 60%;
+    display: block;
+  }
+
+    #posts .post {
+      margin-bottom: 2.5em;
+      display: block;
+      padding: 2em 4em;
+      background-color: #E9E9ED;
+    }
+
+      .post .post-header {
+        margin-bottom: 1.5em;
+      }
+
+        .post .post-header .post-title {
+          margin-bottom: 0.25em;
+          color: #1a1a1a;
+        }
+
+        .post .post-header .post-details {
+          font-size: 12px;
+        }
+
+      .post .post-body {}
+
+        .post .post-preview p {
+          margin-bottom: 0.75em;
+        }
+
+        .post .post-preview img {
+          max-width: 100%;
+          margin: 0 auto;
+        }
+
+
+      .post hr {
+        margin: 1.5em 0 0.75em;
+      }
+
+      .post .post-tags {
+        display: block;
+        text-align: center;
+        list-style-type: none;
+      }
+
+        .post .post-tags .post-tag {
+          display: inline-block;
+        }
+
+        .post .post-tags .post-tag a {
+          display: inline-block;
+          background-color: #fff;
+          margin: 0 0.5em;
+          padding: 0.5em;
+        }
+
+    #navigation {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+      #navigation a {
+        color: #1a1a1a;
+      }
+
+        #navigation a:hover {
+          color: #5a5a5a;
+        }
+
+  #social-media {
+    width: 30%;
+    background-color: #E9E9ED;
+    padding: 2em;
+    display: block;
+  }
+
+    #social-media h3 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+/* INDIVIDUAL POST / PAGE styles */
+#single {
+  padding: 2em;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+#single .post {
+  width: 100%;
+  margin: 2.5em;
+}
+
+  #single .post .post-header {
+    margin-bottom: 2em;
+  }
+
+    #single .post .post-header h1 {
+      font-size: 3.5em;
+      margin-bottom: 0.25em;
+    }
+
+  #single .post .post-body {
+    width: 60%;
+    padding: 0 1em;
+  }
+
+    #single .post img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    #single .post p {
+      
+      margin: 1em 0;
+    }
+
+  #single .post .post-footer {
+    width: 60%;
+  }
+
+#single #social-media {
+  position: absolute;
+  top: 100vh;
+  right: 5em;
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    padding: 0 1em;
+    display: table;
+    top: 0;
+  }
+
+    header .logo {
+      height: 60%;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+      header .logo img {
+        height: 30%;
+      }
+
+  nav {
+    width: 35%;
+    position: absolute;
+    background: #fff;
+    top: 4em;
+    right: 1em;
+    display: none;
+  }
+
+    nav .nav-item {
+      width: 100%;
+      margin: 0;
+      display: block;
+      text-align: center;
+    }
+
+  .show-menu {
+    display: block;
+    font-size: 2em;
+    margin-right: 0.5em;
+  }
+
+  #main-info h1 {
+    font-size: 2.75em;
+  }
+
+  #date-box, #location-box {
+    margin: 1em auto;
+  }
+
+    #date-box {width: 42%;}
+    #location-box {width: 48%;}
+
+  #buttons {
+    width: 50%;
+  }
+
+  /* FOOTER STYLES */
+  footer {
+    padding: 1.5em;
+  }
+
+    .sitemap {
+      width: 25%;
+    }
+
+    .logos {
+      width: 25%;
+    }
+
+      .logos img {
+        width: 100%;
+      }
+
+  /* MAIN STYLES */
+  #news {
+    padding: 2.5em;
+    justify-content: space-between;
+  }
+
+    #posts {
+      width: 63%;
+    }
+
+      #posts .post {
+        padding: 2em;
+      }
+
+    #social-media {
+      width: 35%;
+    }
+
+  /* SINGLE POST STYLES */
+  #single #social-media {
+    right: 3em;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  body {
+    position: relative;
+    display: block;
+  }
+
+  /* HEADER STYLES */
+  header {
+    padding: 0 1em;
+    display: table;
+    top: 0;
+  }
+
+    header .logo {
+      height: 50%;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+      header .logo img {
+        height: auto;
+        width: 80%;
+      }
+
+    nav {
+      width: 100%;
+      position: absolute;
+      background: #fff;
+      top: 4em;
+      left: 0;
+      display: none;
+    }
+
+      nav .nav-item {
+        width: 100%;
+        margin: 0;
+        display: block;
+        text-align: center;
+      }
+
+    .show-menu {
+      display: block;
+      font-size: 2em;
+    }
+
+  #above-fold, #single {
+    display: block;
+  }
+
+    #above-fold > div {
+      width: 100%;
+    }
+
+    #main-info {
+      padding: 1.5em 1em 0;
+    }
+
+      #main-info h1 {
+        font-size: 1.9em;
+      }
+
+    #details {
+      display: block;
+    }
+
+      #date-box, #location-box {
+        margin: 1em auto;
+      }
+
+      #date-box {width: 90%;}
+      #location-box {width: 100%;}
+
+        #date, #location {
+          font-size: 0.8em;
+          line-height: 100%;
+        }
+
+    #buttons {
+      display: block;
+      padding: 0 1em;
+      margin-top: 3em;
+    }
+
+      #buttons a {
+        display: block;
+        margin: 1em auto;
+      }
+
+  /* FOOTER STYLES */
+  footer {
+    display: table-cell;
+    height: auto;
+    vertical-align: bottom;
+    padding-bottom: 0.5em;
+  }
+
+    .sitemap {
+      display: none;
+    }
+
+    .logos {
+      width: 100%;
+      margin: 1em auto;
+    }
+
+      .logos img {
+        margin: 0 auto;
+        width: 49%;
+        display: inline-block;
+      }
+
+  /* MAIN STYLES */
+  header ~ div {
+    display: block;
+    width: 100vw;
+  }
+
+  #news {
+    display: block;
+    width: 100vw;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+    #posts, #social-media {
+      display: block;
+      width: 100%;
+    }
+
+      #posts .post, #social-media {
+        padding: 2em 1.5em;
+        margin-bottom: 1.5em;
+      }
+
+        .post .post-header {
+          margin-bottom: 1em;
+        }
+
+          .post .post-header h1 {
+            font-size: 1.75em;
+          }
+
+          .post .post-header .post-details {
+            font-size: 10px;
+          }
+
+        .post .post-body {}
+
+          .post .post-tags {
+            font-size: 12px;
+          }
+
+            .post .post-tags .post-tag {
+              margin: 0;
+            }
+
+    #navigation {
+      display: block;
+      margin-bottom: 1.5em;
+    }
+
+      #navigation a {
+        margin-bottom: 1em;
+      }
+
+      #navigation .older-posts {
+        float: left;
+      }
+
+      #navigation .newer-posts {
+        float: right;
+      }
+
+    #social-media {
+      clear: both;
+    }
+
+  /* SINGLE POST STYLES */
+  #single {
+    padding: 1em 1.5em;
+  }
+
+    #single .post {
+      display: block;
+      margin: 0;
+      margin-top: 1em;
+    }
+
+    #single .post .post-header {
+      margin-bottom: 1em;
+    }
+
+      #single .post .post-header h1 {
+        font-size: 1.9em;
+      }
+
+      #single .post .post-info {
+        font-size: 0.8em;
+      }
+
+    #single .post .post-body, #single .post .post-footer {
+      width: 100%;
+      padding: 0;
+    }
+
+    #single #social-media {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+  header .logo img {width: 65%;}
+  #buttons {padding: 0 4em;}
+  #date-box {width: 60%;}
+  #location-box {width: 65%;}
+
+  
+}
+
+@media screen and (max-width: 370px) {
+  #buttons {padding: 0 3em;}
+  #date-box {width: 70%;}
+  #location-box {width: 80%;}
+}
+
+@media screen and (max-width: 320px) {
+  #date-box {width: 90%;}
+  #location-box {width: 100%;}
+
+  .logos img {
+    width: 70%;
+    display: block;
+  }
+}
