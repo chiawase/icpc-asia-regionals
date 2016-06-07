@@ -14,7 +14,7 @@
   </div>
 
   <div id="buttons">
-    <a href="register.html">Register Now</a>
+    <a href="<?php echo get_permalink(9); ?>">Register Now</a>
     <a href="#news">Learn More</a>
   </div>
 </div>

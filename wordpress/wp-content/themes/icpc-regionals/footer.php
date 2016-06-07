@@ -1,12 +1,14 @@
 <?php wp_footer(); ?>
 <footer>
   <ul class="sitemap">
-    <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="schedule.html">Schedule</a></li>
-    <li><a href="instructions.html">Instructions</a></li>
-    <li><a href="news.html">News &amp; Announcements</a></li>
-    <li><a href="register.html">How to Register</a></li>
+    <!-- <li><a href="<?php #echo esc_url(home_url('/')); ?>">Home</a></li> -->
+    <!-- <li><a href="about.html">About</a></li> -->
+    <!-- <li><a href="schedule.html">Schedule</a></li> -->
+    <!-- <li><a href="instructions.html">Instructions</a></li> -->
+    <!-- <li><a href="news.html">News &amp; Announcements</a></li> -->
+    <!-- <li><a href="register.html">How to Register</a></li> -->
+    <li><a href="https://icpc.baylor.edu/">ICPC Web site</a> (Baylor University)</li>
+    <li><a href="http://blog.sina.com.cn/cjhwang">Blog of ACM-ICPC Asia Director </a><br>(Prof. C Jinshong Hwang)</li>
   </ul>
 
   <div class="copyright">
@@ -20,23 +22,6 @@
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script type="text/javascript">
-var navHeight = document.getElementsByTagName('nav')[0].clientHeight;
-
-$('a[href*="#"]:not([href="#"])').click(function (e) {
-  e.preventDefault();
-  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-    if (target.length) {
-      $('html, body').animate({
-        scrollTop: target.offset().top - (navHeight*2)
-      }, 800);
-      location.hash = this.hash;
-      return false;
-    }
-  }
-});
-</script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 </body>
 </html>

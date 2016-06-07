@@ -10,8 +10,6 @@ Tags: icpc, acm, ateneo, asia, manila, regionals
 /* STYLESHEET FOR ACM ICPC ASIA-MANILA REGIONALS WEBSITE */
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -92,24 +90,33 @@ header {
       transition: 200ms;
     }
 
-    nav .nav-item {
-      margin: 0 0.5em;
-      color: #066C91;
-      padding: 0.5em 0.75em;
+    .primary-menu {
+      list-style-type: none;
     }
 
-      nav .nav-item:hover {
-        color: #00AABC;
+      .primary-menu li {
+        display: inline-block;
+        margin: 0 0.5em;
       }
 
+      .primary-menu li a {
+        color: #066C91;
+        padding: 0.5em 0.75em;
+      }
+
+        .primary-menu li a:hover {
+          color: #00AABC;
+        }
+
       /* special button */
-      #register {
+      .primary-menu .special a {
         background-color: #066C91;
         color: #fff;
       }
 
-        #register:hover {
+        .primary-menu .special a:hover {
           background-color: #00AABC;
+          color: #fff;
         }
 
 /* FOOTER STYLES */
@@ -127,13 +134,20 @@ footer {
 
   .sitemap {
     width: 20%;
+    padding: 0;
     height: 9em;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
+    justify-content: center;
+    /*visibility: hidden;*/
   }
+
+    .sitemap li {
+      font-size: 12px;
+    }
 
   .copyright {
     align-self: flex-end;
@@ -234,8 +248,15 @@ header ~ div {
   padding: 2.5em 5em;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: flex-start;
 }
+
+  /* If there are headers */
+  .page-title {
+    width: 100%;
+    margin: 1.5em 0 1em;
+  }
 
   #posts {
     width: 60%;
@@ -338,8 +359,8 @@ header ~ div {
   }
 
     #single .post .post-header h1 {
-      font-size: 3.5em;
-      margin-bottom: 0.25em;
+      font-size: 3em;
+      margin: 0.25em 0;
     }
 
   #single .post .post-body {
